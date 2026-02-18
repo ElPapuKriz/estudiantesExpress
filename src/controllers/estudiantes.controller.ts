@@ -14,7 +14,7 @@ export const getAllStudents = async (req: Request, res: Response) => {
             success: true,
             total: estudiantesObtenidos.length,
             data: estudiantesObtenidos,
-            autor: "Christopehr Pazo V1",
+            autor: "Christopehr Pazo en Vercel",
 
         })
     } catch (error) {
@@ -22,7 +22,7 @@ export const getAllStudents = async (req: Request, res: Response) => {
             success: false,
             msg: "Hubo un error",
             error:error instanceof Error ? error.message:"Error desconocido",
-            autor: "Christopehr Pazo V1",
+            autor: "Christopehr Pazo en Vercel",
 
         })
     }
