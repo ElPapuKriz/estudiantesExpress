@@ -26,7 +26,7 @@ app.get("/",(req,res)=>{
         endPoints:{
             'GET /api/estudiantes':"Obtener todos los estudiantes",
             'GET /api/estudiantes/:id':"Obtener estudiante por Id",
-            'GET /api/peliculas':"Obtener todas las peliculas",
+            'POST /api/estudiantes':"Crear nuevo usuario",
 
         }
     })
