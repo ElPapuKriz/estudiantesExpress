@@ -3,8 +3,7 @@ import express from 'express';
 import "dotenv/config"
 
 import estudiantesRoutes from "./routes/estudiantes.routes"
-import peliculasRoutes from "./routes/peliculas.routes"
-import con from "./routes/checkConnection.route"
+
 import { connectBd } from './config/database';
 
 
@@ -16,8 +15,7 @@ connectBd();
 app.use(express.json());
 
 app.use('/api/estudiantes',estudiantesRoutes);
-app.use("/api/peliculas",peliculasRoutes)
-app.use("/con",con)
+
 
 app.get("/",(req,res)=>{
     
@@ -27,7 +25,6 @@ app.get("/",(req,res)=>{
             'GET /api/estudiantes':"Obtener todos los estudiantes",
             'GET /api/estudiantes/:id':"Obtener estudiante por Id",
             'POST /api/estudiantes':"Crear nuevo usuario",
-
         }
     })
 })

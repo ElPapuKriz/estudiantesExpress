@@ -7,7 +7,7 @@ import Estudiante from "../models/estudiante.models"
 
 export const getAllStudents = async (req: Request, res: Response) => {
 
-    const estudiantesObtenidos = await Estudiante.find()
+    const estudiantesObtenidos = await Estudiante.find().select("-__v")
 
     try {
         res.json({
